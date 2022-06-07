@@ -335,32 +335,6 @@ header .navbar ul li a:hover {
   padding-bottom: 0;
 }
 
-.contact .row form {
-  flex: 1 1 45rem;
-  padding: 2rem;
-  margin: 2rem;
-  margin-bottom: 4rem;
-}
-
-.contact .row form .box {
-  padding: 1.5rem;
-  margin: 1rem 0;
-  background: #3333;
-  color: #fff;
-  text-transform: none;
-  font-size: 1.7rem;
-  width: 100%;
-}
-
-.contact .row form .box::placeholder {
-  text-transform: capitalize;
-}
-
-.contact .row form .message {
-  height: 15rem;
-  resize: none;
-}
-
 .contact .row .content .title {
   text-transform: uppercase;
   color: #fff;
@@ -395,7 +369,31 @@ header .navbar ul li a:hover {
   padding-right: 1rem;
   color: var(--yellow);
 }
+/* .contact .row form {
+  flex: 1 1 45rem;
+  padding: 2rem;
+  margin: 2rem;
+  margin-bottom: 4rem;
+}
 
+.contact .row form .box {
+  padding: 1.5rem;
+  margin: 1rem 0;
+  background: #3333;
+  color: #fff;
+  text-transform: none;
+  font-size: 1.7rem;
+  width: 100%;
+} */
+
+/* .contact .row form .box::placeholder {
+  text-transform: capitalize;
+}
+
+.contact .row form .message {
+  height: 15rem;
+  resize: none;
+} */
 .top {
   position: fixed;
   bottom: 7.5rem;
@@ -460,8 +458,55 @@ header .navbar ul li a:hover {
   .portfolio .box-container .box {
     width: 100%;
   }
+}
+.work .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-  .contact .row form {
-    margin: 3rem 0;
-  }
+.work .row .content {
+  flex: 1 1 30rem;
+  padding: 4rem;
+  padding-bottom: 0;
+}
+
+.work .row .content .title {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+.work .row .content .info h3 {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  color: #eee;
+  padding: 0.5rem 0;
+  font-weight: normal;
+}
+.work .row .content .info h3 strong {
+  padding-right: 1rem;
+  color: var(--yellow);
+}
+
+.work .row .content .info h3 button {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: #eee;
+  background-color: #111;
+  padding: 0rem 0;
+  font-weight: normal;
+}
+
+.work .row .content .info h3 a {
+  color: #eee;
+}
+
+.work .row .content .info h3 i {
+  padding-right: 1rem;
+  color: var(--yellow);
 }
