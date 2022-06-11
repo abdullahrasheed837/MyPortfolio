@@ -4,7 +4,7 @@ btnDownload.addEventListener("click", startDownload);
 
 async function startDownload() {
   alert("click");
-  let url = "Resume.pdf";
+  let url = "/images/Resume.pdf";
   let fileName = "Abdullah's Resume.pdf";
   const res = await fetch(url);
   const blob = await res.blob();
