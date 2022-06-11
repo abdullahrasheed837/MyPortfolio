@@ -3,7 +3,6 @@ let btnDownload = document.getElementById("buton");
 btnDownload.addEventListener("click", startDownload);
 
 async function startDownload() {
-  alert("click");
   let url = "/images/Resume.pdf";
   let fileName = "Abdullah's Resume.pdf";
   const res = await fetch(url);
