@@ -1,3 +1,16 @@
+let btnDownload = document.querySelector("button");
+
+btnDownload.addEventListener("click", startDownload);
+
+async function startDownload() {
+  alert("clicked");
+  let url = "/images/Resume.pdf";
+  let fileName = "Abdullah's Resume.pdf";
+  const res = await fetch(url);
+  const blob = await res.blob();
+  saveAs(blob, fileName);
+}
+
 $(document).ready(function () {
   $("#menu").click(function () {
     $(this).toggleClass("fa-times");
