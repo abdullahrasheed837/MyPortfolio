@@ -80,6 +80,19 @@
 
                 <a href="/images/Resume.pdf" download="Abdullah's Resume.pdf"><button class="btn"> Download CV <i
                             class="fas fa-download"></i> </button></a>
+                <script>
+                    let btnDownload = document.querySelector("button");
+
+                    btnDownload.addEventListener("click", startDownload);
+
+                    async function startDownload() {
+                        let url = "/images/Resume.pdf";
+                        let fileName = "Abdullah's Resume.pdf";
+                        const res = await fetch(url);
+                        const blob = await res.blob();
+                        saveAs(blob, fileName);
+                    }
+                </script>
             </div>
 
             <div class="counter">
