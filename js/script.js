@@ -1,4 +1,4 @@
-let btnDownload = document.querySelector("button");
+let btnDownload = document.getElementById("buton");
 
 btnDownload.addEventListener("click", startDownload);
 
