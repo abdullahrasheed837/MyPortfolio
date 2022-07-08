@@ -1,6 +1,6 @@
 $("#GetFile").on("click", function () {
   $.ajax({
-    url: "MyPortfolio/images/Resume.pdf",
+    url: "/images/Resume.pdf",
     method: "GET",
     xhrFields: {
       responseType: "blob",
