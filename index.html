@@ -81,29 +81,40 @@
                     Programming,
                     Verbal Communication, Flutter, Professionalism, Critical Thinker, Team Player, Adaptibility </h3>
 
-                <button class="btn" id="GetFile"> Download
+                <button class="btn" id="buton"> Download
                         CV <i class="fas fa-download"></i> </button>
                         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
                         <script>
-                          $("#GetFile").on("click", function () {
-                            $.ajax({
-                              url: "Resume.pdf",
-                              method: "GET",
-                              xhrFields: {
-                                responseType: "blob",
-                              },
-                              success: function (data) {
-                                var a = document.createElement("a");
-                                var url = window.URL.createObjectURL(data);
-                                a.href = url;
-                                a.download = "Abdullah's Resume.pdf";
-                                document.body.append(a);
-                                a.click();
-                                a.remove();
-                                window.URL.revokeObjectURL(url);
-                              },
-                            });
-                          });
+//                           $("#GetFile").on("click", function () {
+//                             $.ajax({
+//                               url: "Resume.pdf",
+//                               method: "GET",
+//                               xhrFields: {
+//                                 responseType: "blob",
+//                               },
+//                               success: function (data) {
+//                                 var a = document.createElement("a");
+//                                 var url = window.URL.createObjectURL(data);
+//                                 a.href = url;
+//                                 a.download = "Abdullah's Resume.pdf";
+//                                 document.body.append(a);
+//                                 a.click();
+//                                 a.remove();
+//                                 window.URL.revokeObjectURL(url);
+//                               },
+//                             });
+//                           });
+                            let btnDownload = document.getElementById("buton");
+
+btnDownload.addEventListener("click", startDownload);
+
+async function startDownload() {
+  let url = "/images/Resume.pdf";
+  let fileName = "Abdullah's Resume.pdf";
+  const res = await fetch(url);
+  const blob = await res.blob();
+  saveAs(blob, fileName);
+}
                         </script>
                      
             </div>
