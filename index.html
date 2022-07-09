@@ -50,9 +50,8 @@
 
         <h3>HI THERE !</h3>
         <h1>I'M <span>Abdullah Rasheed</span></h1>
-        <p>I am a dependable and hardworking Computer Science student who is flexible in time management, creative at
-            problem-solving, and adaptable to any environment. I am passionate about Artificial Intelligence and Web
-            development, and the future technologies that lie ahead. I have completed several web-based projects.
+        <p>I am a dependable and hardworking Computer Science student at UET, Lahore who is flexible in time management, creative at problem-solving, and adaptable to any environment. I am passionate about Web Development, Data Science, and the future technologies that lie ahead.  My expertise is in HTML, CSS, JavaScript, JQUERY, Bootstrap, PHP, and Unity 3d. Currently, I am building my expertise in the MERN stack and DotNET. I have completed several full-stack responsive web-based projects. I have also completed several Web-based, Mobile-based, and Data Science certifications from Coursera and other renowned platforms.
+            
         </p>
         <div class="info">
             <h3> <span> Interests : </span> Web Development, Data Science, Cricket, Badminton, Movies and Series </h3>
@@ -75,18 +74,49 @@
             <div class="info">
                 <h3> <span> Name : </span> Abdullah Rasheed </h3>
                 <h3> <span> Age : </span> 21 </h3>
-                <h3> <span> Qualification : </span> BS.CS (Current 7th Sem) </h3>
+                <h3> <span> Qualification : </span> BS.CS (Currently 7th Sem) </h3>
                 <h3> <span> Position : </span> Full Stack Web Developer, Data Science Enthusiast</h3>
                 <h3> <span> Language : </span> English, Urdu </h3>
-                <h3> <span> Skills : </span> Python, Javascript, C++, SQL, PHP, Adobe XD, Unity 3D, Bootstrap,
+                <h3> <span> Skills : </span> Python, Javascript, C++, SQL, .NET, C#, React.JS,  PHP, Adobe XD, Unity 3D, Bootstrap,
                     Programming,
                     Verbal Communication, Flutter, Professionalism, Critical Thinker, Team Player, Adaptibility </h3>
 
-                <a href="#"><button class="btn" id="buton"> Download
-                        CV <i class="fas fa-download"></i> </button></a>
-                <script>
+                <button class="btn" id="buton"> Download
+                        CV <i class="fas fa-download"></i> </button>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+                        <script>
+//                           $("#GetFile").on("click", function () {
+//                             $.ajax({
+//                               url: "Resume.pdf",
+//                               method: "GET",
+//                               xhrFields: {
+//                                 responseType: "blob",
+//                               },
+//                               success: function (data) {
+//                                 var a = document.createElement("a");
+//                                 var url = window.URL.createObjectURL(data);
+//                                 a.href = url;
+//                                 a.download = "Abdullah's Resume.pdf";
+//                                 document.body.append(a);
+//                                 a.click();
+//                                 a.remove();
+//                                 window.URL.revokeObjectURL(url);
+//                               },
+//                             });
+//                           });
+                            let btnDownload = document.getElementById("buton");
 
-                </script>
+btnDownload.addEventListener("click", startDownload);
+
+async function startDownload() {
+  let url = "Resume.pdf";
+  let fileName = "Abdullah's Resume.pdf";
+  const res = await fetch(url);
+  const blob = await res.blob();
+  saveAs(blob, fileName);
+}
+                        </script>
+                     
             </div>
 
             <div class="counter">
@@ -164,6 +194,13 @@
                 <p>Completed Web based and Mobile app based Semester Projects in PHP and flutter. Also other projects
                     such
                     as UI designing and Basic Game development
+                </p>
+            </div>
+            <div class=" box">
+                <i class="fas fa-user-graduate"></i>
+                <span>June 2022 - Present</span>
+                <h3>Internship (2.5 Months)</h3>
+                <p>Doing Internship with Technosoft Solutions for 2.5 months in Lahore
                 </p>
             </div>
 
@@ -396,8 +433,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"
         integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+       <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
     <script src="js/script.js">
     </script>
 
